@@ -6,6 +6,10 @@
   font-family: "Signika", serif;
 }
 
+ul {
+  list-style-type: none;
+}
+
 .title {
   background-color: aquamarine;
   height: 4rem;
@@ -16,4 +20,31 @@
 .title > h1 {
   color: white;
   padding-left: 2rem;
+}
+
+.todo-lists {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+
+.task-title {
+  font-size: 15px;
+}
+
+.section-title {
+  font-size: 20px;
+}
+
+.in-progress {
+  padding-left: 1rem;
+  padding: top 1rem;
+}
+
+.in-progress > * {
+  padding: 0.5rem;
+}
+
+.in-progress li {
+  padding: 0.2rem;
 }
