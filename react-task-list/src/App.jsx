@@ -3,8 +3,8 @@ import './App.css'
 import tasks from '../data/tasks'
 
 function App() {
-    const inProgressTasks = tasks.filter(task => task.state === 'in_progress');
-    const completedTasks = tasks.filter(task => task.state === 'completed');
+  const inProgressTasks = tasks.filter(task => task.state === 'in_progress' || task.state === 'backlog');
+  const completedTasks = tasks.filter(task => task.state === 'completed');
 
   return (
     <>
@@ -13,7 +13,7 @@ function App() {
       </div>
 
       <div className='todo-lists'>
-        <div className='in-progress'>
+        <div className='tasks-list'>
           <h3 className='section-title'>Current tasks</h3>
           <ul>
             {inProgressTasks.map(task => (
@@ -27,9 +27,21 @@ function App() {
           </ul>
         </div>
 
-        <div>
-          <h3>Copleted tasks</h3>
+        <div className='tasks-list'>
+          <h3 className='section-title'>Completed tasks</h3>
+          <ul>
+            {completedTasks.map(task => (
+              <li key={task.id}><strong className='task-title'>{task.title}</strong>
+              <ul>
+                <li>Priority: {task.priority}</li>
+                <li>Est time: {task.estimatedTime}</li>
+              </ul>
+              </li>
+            ))}
+          </ul>
         </div>
+
+        
       </div>
     </>
   )

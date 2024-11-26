@@ -36,15 +36,15 @@ ul {
   font-size: 20px;
 }
 
-.in-progress {
+.tasks-list {
   padding-left: 1rem;
   padding: top 1rem;
 }
 
-.in-progress > * {
+.tasks-list > * {
   padding: 0.5rem;
 }
 
-.in-progress li {
+.tasks-list li {
   padding: 0.2rem;
 }
