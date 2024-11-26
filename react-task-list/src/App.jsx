@@ -14,7 +14,7 @@ function App() {
 
       <div className='todo-lists'>
         <div className='tasks-list'>
-          <h3 className='section-title'>Current tasks</h3>
+          <h3 className='section-title'>Current tasks: </h3>
           <ul>
             {inProgressTasks.map(task => (
               <li key={task.id}><strong className='task-title'>{task.title}</strong>
@@ -28,7 +28,7 @@ function App() {
         </div>
 
         <div className='tasks-list'>
-          <h3 className='section-title'>Completed tasks</h3>
+          <h3 className='section-title'>Completed tasks: </h3>
           <ul>
             {completedTasks.map(task => (
               <li key={task.id}><strong className='task-title'>{task.title}</strong>
