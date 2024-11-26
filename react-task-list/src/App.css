@@ -48,3 +48,13 @@ ul {
 .tasks-list li {
   padding: 0.2rem;
 }
+
+.task-state {
+  padding: 5px;
+  margin-left: 1rem;
+  font-size: 10px;
+  font-weight: normal;
+  background-color: chocolate;
+  color: aliceblue;
+}
+
